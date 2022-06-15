@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>car_109.jpg</filename>
+	<path>C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\images\train\car_109.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>320</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>19</xmin>
+			<ymin>90</ymin>
+			<xmax>301</xmax>
+			<ymax>234</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,4 @@
+python generate_tfrecord.py -x C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\images\train -l C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\annotations\label_map.pbtxt -o C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\annotations\train.record
+
+python generate_tfrecord.py -x C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\images\test -l C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\annotations\label_map.pbtxt -o C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\annotations\test.record
+

@@ -1,0 +1,94 @@
+C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training>python model_main_tf2.py --model_dir=models/mobnetv2_car --pipeline_config_path=models/mobnetv2_car/pipeline.config
+2022-06-12 19:13:40.158594: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-12 19:13:40.644046: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 2153 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1650, pci bus id: 0000:0a:00.0, compute capability: 7.5
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+I0612 19:13:40.716335 13380 mirrored_strategy.py:374] Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+INFO:tensorflow:Maybe overwriting train_steps: None
+I0612 19:13:40.720336 13380 config_util.py:552] Maybe overwriting train_steps: None
+INFO:tensorflow:Maybe overwriting use_bfloat16: False
+I0612 19:13:40.720336 13380 config_util.py:552] Maybe overwriting use_bfloat16: False
+WARNING:tensorflow:From C:\Program Files\Python310\lib\site-packages\object_detection\model_lib_v2.py:563: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.
+Instructions for updating:
+rename to distribute_datasets_from_function
+W0612 19:13:40.744342 13380 deprecation.py:350] From C:\Program Files\Python310\lib\site-packages\object_detection\model_lib_v2.py:563: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.
+Instructions for updating:
+rename to distribute_datasets_from_function
+INFO:tensorflow:Reading unweighted datasets: ['annotations/label_map.pbtxt']
+I0612 19:13:40.748343 13380 dataset_builder.py:162] Reading unweighted datasets: ['annotations/label_map.pbtxt']
+INFO:tensorflow:Reading record datasets for input file: ['annotations/label_map.pbtxt']
+I0612 19:13:40.748343 13380 dataset_builder.py:79] Reading record datasets for input file: ['annotations/label_map.pbtxt']
+INFO:tensorflow:Number of filenames to read: 1
+I0612 19:13:40.749344 13380 dataset_builder.py:80] Number of filenames to read: 1
+WARNING:tensorflow:num_readers has been reduced to 1 to match input file shards.
+W0612 19:13:40.749344 13380 dataset_builder.py:86] num_readers has been reduced to 1 to match input file shards.
+WARNING:tensorflow:From C:\Program Files\Python310\lib\site-packages\object_detection\builders\dataset_builder.py:100: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.deterministic`.
+W0612 19:13:40.752344 13380 deprecation.py:350] From C:\Program Files\Python310\lib\site-packages\object_detection\builders\dataset_builder.py:100: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.deterministic`.
+WARNING:tensorflow:From C:\Program Files\Python310\lib\site-packages\object_detection\builders\dataset_builder.py:235: DatasetV1.map_with_legacy_function (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.map()
+W0612 19:13:40.779350 13380 deprecation.py:350] From C:\Program Files\Python310\lib\site-packages\object_detection\builders\dataset_builder.py:235: DatasetV1.map_with_legacy_function (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.map()
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+W0612 19:13:46.904721 13380 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+W0612 19:13:49.410282 13380 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0612 19:13:50.899615 13380 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+Traceback (most recent call last):
+  File "C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\model_main_tf2.py", line 114, in <module>
+    tf.compat.v1.app.run()
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\platform\app.py", line 36, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\absl\app.py", line 312, in run
+    _run_main(main, args)
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\absl\app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\model_main_tf2.py", line 105, in main
+    model_lib_v2.train_loop(
+  File "C:\Program Files\Python310\lib\site-packages\object_detection\model_lib_v2.py", line 605, in train_loop
+    load_fine_tune_checkpoint(
+  File "C:\Program Files\Python310\lib\site-packages\object_detection\model_lib_v2.py", line 401, in load_fine_tune_checkpoint
+    _ensure_model_is_built(model, input_dataset, unpad_groundtruth_tensors)
+  File "C:\Program Files\Python310\lib\site-packages\object_detection\model_lib_v2.py", line 161, in _ensure_model_is_built
+    features, labels = iter(input_dataset).next()
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\distribute\input_lib.py", line 569, in next
+    return self.__next__()
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\distribute\input_lib.py", line 573, in __next__
+    return self.get_next()
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\distribute\input_lib.py", line 630, in get_next
+    return self._get_next_no_partial_batch_handling(name)
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\distribute\input_lib.py", line 662, in _get_next_no_partial_batch_handling
+    replicas.extend(self._iterators[i].get_next_as_list(new_name))
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\distribute\input_lib.py", line 1632, in get_next_as_list
+    return self._format_data_list_with_options(self._iterator.get_next())
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\data\ops\multi_device_iterator_ops.py", line 531, in get_next
+    result.append(self._device_iterators[i].get_next())
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\data\ops\iterator_ops.py", line 819, in get_next
+    return self._next_internal()
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\data\ops\iterator_ops.py", line 749, in _next_internal
+    ret = gen_dataset_ops.iterator_get_next(
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\ops\gen_dataset_ops.py", line 3016, in iterator_get_next
+    _ops.raise_from_not_ok_status(e, name)
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\framework\ops.py", line 7164, in raise_from_not_ok_status
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+tensorflow.python.framework.errors_impl.DataLossError: corrupted record at 0
+         [[{{node MultiDeviceIteratorGetNextFromShard}}]]
+         [[RemoteCall]] [Op:IteratorGetNext]

@@ -1,0 +1,1 @@
+python model_main_tf2.py --model_dir=models/mobnetv2_car --pipeline_config_path=models/mobnetv2_car/pipeline.config
