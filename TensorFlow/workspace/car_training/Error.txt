@@ -1,0 +1,146 @@
+Microsoft Windows [Version 10.0.19044.1741]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training>python model_main_tf2.py --model_dir=models/mobnetv2_car --pipeline_config_path=models/mobnetv2_car/pipeline.config
+2022-06-15 19:11:45.330717: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-15 19:11:45.835620: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 2153 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1650, pci bus id: 0000:0a:00.0, compute capability: 7.5
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+I0615 19:11:45.909452  9608 mirrored_strategy.py:374] Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+INFO:tensorflow:Maybe overwriting train_steps: None
+I0615 19:11:45.913453  9608 config_util.py:552] Maybe overwriting train_steps: None
+INFO:tensorflow:Maybe overwriting use_bfloat16: False
+I0615 19:11:45.914453  9608 config_util.py:552] Maybe overwriting use_bfloat16: False
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py:563: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.
+Instructions for updating:
+rename to distribute_datasets_from_function
+W0615 19:11:45.940459  9608 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py:563: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.
+Instructions for updating:
+rename to distribute_datasets_from_function
+INFO:tensorflow:Reading unweighted datasets: ['C:/Users/oknor/Documents/Programming/TrainingModels/TensorFlow/workspace/car_training/annotations/train.record']
+I0615 19:11:45.944459  9608 dataset_builder.py:162] Reading unweighted datasets: ['C:/Users/oknor/Documents/Programming/TrainingModels/TensorFlow/workspace/car_training/annotations/train.record']
+INFO:tensorflow:Reading record datasets for input file: ['C:/Users/oknor/Documents/Programming/TrainingModels/TensorFlow/workspace/car_training/annotations/train.record']
+I0615 19:11:45.945460  9608 dataset_builder.py:79] Reading record datasets for input file: ['C:/Users/oknor/Documents/Programming/TrainingModels/TensorFlow/workspace/car_training/annotations/train.record']
+INFO:tensorflow:Number of filenames to read: 1
+I0615 19:11:45.946460  9608 dataset_builder.py:80] Number of filenames to read: 1
+WARNING:tensorflow:num_readers has been reduced to 1 to match input file shards.
+W0615 19:11:45.947461  9608 dataset_builder.py:86] num_readers has been reduced to 1 to match input file shards.
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\builders\dataset_builder.py:100: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.deterministic`.
+W0615 19:11:45.950461  9608 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\builders\dataset_builder.py:100: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.deterministic`.
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\builders\dataset_builder.py:235: DatasetV1.map_with_legacy_function (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.map()
+W0615 19:11:45.979468  9608 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\builders\dataset_builder.py:235: DatasetV1.map_with_legacy_function (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.map()
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+W0615 19:11:52.203865  9608 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+W0615 19:11:54.731433  9608 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0615 19:11:56.277780  9608 deprecation.py:350] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\dispatch.py:1082: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\keras\backend.py:450: UserWarning: `tf.keras.backend.set_learning_phase` is deprecated and will be removed after 2020-10-11. To update it, simply pass a True/False value to the `training` argument of the `__call__` method of your layer or model.
+  warnings.warn('`tf.keras.backend.set_learning_phase` is deprecated and '
+2022-06-15 19:12:21.714325: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8401
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.738394  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.741395  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.743395  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.744395  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.746396  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.747396  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.748396  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.749396  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.751397  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0615 19:12:25.752397  9608 cross_device_ops.py:616] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+WARNING:tensorflow:From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\deprecation.py:629: calling map_fn_v2 (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Use fn_output_signature instead
+W0615 19:12:26.293519 16220 deprecation.py:554] From C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\deprecation.py:629: calling map_fn_v2 (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Use fn_output_signature instead
+error: Can't find libdevice directory ${CUDA_DIR}/nvvm/libdevice
+error: Can't find libdevice directory ${CUDA_DIR}/nvvm/libdevice
+error: Can't find libdevice directory ${CUDA_DIR}/nvvm/libdevice
+error: Can't find libdevice directory ${CUDA_DIR}/nvvm/libdevice
+2022-06-15 19:13:01.007705: W tensorflow/core/framework/op_kernel.cc:1733] UNKNOWN: JIT compilation failed.
+Traceback (most recent call last):
+  File "C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\model_main_tf2.py", line 114, in <module>
+    tf.compat.v1.app.run()
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\platform\app.py", line 36, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\absl\app.py", line 312, in run
+    _run_main(main, args)
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\absl\app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "C:\Users\oknor\Documents\Programming\TrainingModels\TensorFlow\workspace\car_training\model_main_tf2.py", line 105, in main
+    model_lib_v2.train_loop(
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py", line 685, in train_loop
+    losses_dict = _dist_train_step(train_input_iter)
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\tensorflow\python\eager\execute.py", line 54, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.UnknownError: Graph execution error:
+
+Detected at node 'train_input_images/write_summary/mod' defined at (most recent call last):
+    File "C:\Program Files\Python310\lib\threading.py", line 966, in _bootstrap
+      self._bootstrap_inner()
+    File "C:\Program Files\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+      self.run()
+    File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py", line 629, in train_step_fn
+      if record_summaries:
+    File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py", line 630, in train_step_fn
+      tf.compat.v2.summary.image(
+    File "C:\Program Files\Python310\lib\site-packages\tensorboard\plugins\image\summary_v2.py", line 141, in image
+      tag=tag, tensor=lazy_tensor, step=step, metadata=summary_metadata
+    File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py", line 599, in <lambda>
+      lambda: global_step % num_steps_per_iteration == 0):
+Node: 'train_input_images/write_summary/mod'
+Detected at node 'train_input_images/write_summary/mod' defined at (most recent call last):
+    File "C:\Program Files\Python310\lib\threading.py", line 966, in _bootstrap
+      self._bootstrap_inner()
+    File "C:\Program Files\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+      self.run()
+    File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py", line 629, in train_step_fn
+      if record_summaries:
+    File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py", line 630, in train_step_fn
+      tf.compat.v2.summary.image(
+    File "C:\Program Files\Python310\lib\site-packages\tensorboard\plugins\image\summary_v2.py", line 141, in image
+      tag=tag, tensor=lazy_tensor, step=step, metadata=summary_metadata
+    File "C:\Users\oknor\AppData\Roaming\Python\Python310\site-packages\object_detection\model_lib_v2.py", line 599, in <lambda>
+      lambda: global_step % num_steps_per_iteration == 0):
+Node: 'train_input_images/write_summary/mod'
+2 root error(s) found.
+  (0) UNKNOWN:  JIT compilation failed.
+         [[{{node train_input_images/write_summary/mod}}]]
+         [[train_input_images/write_summary/Equal_1/_16]]
+  (1) UNKNOWN:  JIT compilation failed.
+         [[{{node train_input_images/write_summary/mod}}]]
+0 successful operations.
+0 derived errors ignored. [Op:__inference__dist_train_step_59118]
